@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.0.6'
+    }
+}
+
+apply plugin: 'org.javafxports.jfxmobile'
+
+repositories {
+    jcenter()
+}
+
+mainClassName = 'com.simplerectangle.SimpleRectangle'
+
+jfxmobile {
+    android {
+        manifest = 'src/android/AndroidManifest.xml'
+        applicationPackage = 'org.javafxports.com.simplerectangle'
+    }
+    ios {
+        infoPList = file('src/ios/Default-Info.plist')
+    }
+}
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="591.0" prefWidth="385.0" style="-fx-background-color: #f5deb3;" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.formular.free.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField id="name" fx:id="name" layoutX="184.0" layoutY="42.0" />
+      <TextField id="famillyName" fx:id="famillyName" layoutX="185.0" layoutY="84.0" />
+      <TextField id="address" fx:id="address" layoutX="185.0" layoutY="130.0" />
+      <Label layoutX="38.0" layoutY="46.0" text="Nume" />
+      <Label layoutX="39.0" layoutY="88.0" text="Prenume" />
+      <Label layoutX="38.0" layoutY="134.0" text="Adresa" />
+      <Label layoutX="39.0" layoutY="183.0" text="Numar de telefon" />
+      <TextField id="phoneNumber" fx:id="phoneNumber" layoutX="185.0" layoutY="179.0" />
+      <Button id="putRecord" fx:id="putRecord" layoutX="142.0" layoutY="232.0" onMouseClicked="#addRecord" style="-fx-background-color: #d2b48c;" text="_Inregistreaza" />
+      <Button id="saveInFile" fx:id="saveInFile" layoutX="130.0" layoutY="476.0" onMouseClicked="#saveInFilePressed" style="-fx-background-color: #aa522d;" text="_Salveaza in fisier" />
+      <ListView id="listViewRecods" fx:id="listViewRecords" layoutX="13.0" layoutY="278.0" prefHeight="176.0" prefWidth="359.0" style="-fx-background-size: 8;" />
+      <Button id="exit" fx:id="exit" layoutX="164.0" layoutY="534.0" onMouseClicked="#exitApp" style="-fx-background-color: #ffb6c1;" text="I_esire" />
+    </children>
+</AnchorPane>

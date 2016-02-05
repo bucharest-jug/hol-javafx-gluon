@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" style="-fx-background-color: #f5fffa;" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.notes.events.EventNoteController">
+    <children>
+        <Label id="label" fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="119.0" layoutY="27.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="345.0" text="Agenda de evenimente" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font></Label>
+      <Button fx:id="addNewEventButton" alignment="CENTER" layoutX="240.0" layoutY="61.0" onAction="#handleAddNewEventButton" opacity="0.95" style="-fx-background-color: #bbf5ee; -fx-padding: 5px; -fx-border-insets: 10px;" text="Add event">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TableView fx:id="tableCurrentEvents" layoutX="14.0" layoutY="111.0" onMouseClicked="#handleMultipleSelectionTextView" prefHeight="200.0" prefWidth="419.0">
+          
+        <columns>
+          <TableColumn fx:id="titleCol" editable="false" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="aboutCol" editable="false" prefWidth="118.0" style="-fx-font-size: 10;" text="About" />
+          <TableColumn fx:id="dateTimeCol" editable="false" prefWidth="137.0" style="-fx-font-size: 12;" text="DataTime" />
+          <TableColumn fx:id="importanceCol" editable="false" prefWidth="87.0" style="-fx-font-size: 12;  -fx-alignment: CENTER" text="Importance" />
+        </columns>
+         
+        
+      </TableView>
+      <Button layoutX="442.0" layoutY="129.0" mnemonicParsing="false" onAction="#deleteSelectedItemsAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #e0eee0;" text="Delete Selected" />
+      <Button fx:id="deleteAllEvents" layoutX="443.0" layoutY="174.0" mnemonicParsing="false" onAction="#deleteAllEventsAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #e0eee0;" text="Delete All Events" />
+      <Button layoutX="443.0" layoutY="223.0" mnemonicParsing="false" onAction="#backupAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #e0eee0;" text="Backup" />
+      <Button layoutX="444.0" layoutY="273.0" mnemonicParsing="false" onAction="#restoreAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #e0eee0;" text="Restore" />
+      <Button fx:id="quitButton" cancelButton="true" layoutX="248.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" style="-fx-background-color: #ffe4e1;" text="Quit">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

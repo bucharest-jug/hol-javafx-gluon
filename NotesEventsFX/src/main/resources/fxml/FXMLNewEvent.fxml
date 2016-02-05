@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.notes.events.resource.DateTimePicker ?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="566.0" style="-fx-background-color: #99CCFF;" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.notes.events.AddNewEventController">
+   <children>
+      <Button fx:id="addEventButton" layoutX="200.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#addNewEvent" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: green;" text="Add event">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="titleTextField" layoutX="194.0" layoutY="43.0" onMouseClicked="#clearTitleArea" onMouseDragEntered="#clearTitleArea" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="59.0" layoutY="47.0" text="Titlle">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" layoutX="194.0" layoutY="88.0" onMouseClicked="#clearDescriptionArea" prefHeight="127.0" prefWidth="200.0" />
+      <Label layoutX="61.0" layoutY="88.0" text="Description">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <DateTimePicker fx:id="eventDateTimePicker" layoutX="194.0" layoutY="276.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="61.0" layoutY="280.0" text="Date">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Slider fx:id="eventImportanceSlider" layoutX="479.0" layoutY="145.0" orientation="VERTICAL" />
+      <Label layoutX="444.0" layoutY="99.0" text="Importance">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
